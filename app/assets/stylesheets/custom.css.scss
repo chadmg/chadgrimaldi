@@ -1,0 +1,204 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+body {
+  /* make room for header */
+  padding-top: 50px;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+
+a {
+  color: #437C97;
+  font-size: 1.1em;
+  &:hover {
+    color: #699CB5;
+    text-decoration: none;
+  }
+}
+
+
+
+.center {
+  text-align: center;
+
+  /* what makes SASS cool, 'nesting'
+  same as using:;
+  .center h1 { }
+  */
+
+  /* this happens in 'jumbotron' pages like
+    Home page, About, Contact */
+  h1 {
+    
+    margin-bottom: 20px;
+    margin-top: 10px;
+  }
+
+}
+
+.jumbotron {
+  padding-top: 15px;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 2.2em !important;
+  letter-spacing: -2px;
+  margin-bottom: 15px;
+  margin-top: 25px;
+
+}
+
+h2 {
+  font-size: 1.9em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  margin-top:35px;
+}
+
+p {
+  font-size: 1.2em !important;
+  line-height: 1.2em !important;
+}
+
+
+$logo-color: #9FC5D7;
+$logo-color-hover: #699CB5;
+$navbar-color: #437C97;
+
+.navbar .nav > li.dropdown.open.active > a:hover, 
+.navbar .nav > li.dropdown.open > a
+{
+   background-color: $logo-color-hover;
+}
+
+.menuitem {
+
+  margin-top: 4px;
+}
+
+
+ul.nav a {
+  color: #cdc9c9 !important;
+
+  &:hover {
+    color: white !important;
+  }
+}
+
+ul.dropdown-menu {
+  background-color: $logo-color-hover !important;
+
+  a {
+    color: #cdc9c9 !important;
+    background-color: $logo-color-hover !important;
+  }
+}
+
+#logo {
+  font-size: 2.1em;
+  color: $logo-color !important;
+  letter-spacing: -1px;
+  text-align: center;
+  font-weight: bold;
+  text-decoration: none;
+  margin-top: 2px;
+
+  &:hover {
+    color: white !important;
+    text-decoration: none;
+  }
+}
+
+
+.navbar-inverse {
+  background-color: $navbar-color;
+
+}
+
+.not-brand {
+  position: relative;
+}
+
+
+
+.brand {
+  position: absolute;
+    left: 50%;
+    margin-left: -110px !important;
+    display: block;
+}
+
+
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: #777;
+  font-size: 1.0em !important;
+}
+
+footer a {
+  font-size: 1.0em !important;
+  color: #555;
+}
+
+footer a:hover {
+  color: #222;
+}
+
+footer small {
+  float: left;
+}
+
+footer ul {
+  float: right;
+  list-style: none;
+}
+
+footer ul li {
+  float: left;
+  margin-left: 15px;
+}
+
+
+/* projects list style */
+.projects {
+  list-style: none;
+  margin: 0;
+  
+  li {
+    margin-top: 15px;
+    margin-bottom: 40px;
+    overflow: auto;
+    padding: 0;
+    .li-title {
+      font-size: 1.5em !important;
+      border-bottom: 1px solid #777;
+      position: relative;
+
+      .github-icon {
+        margin-left: 10px; 
+        position: absolute; 
+        bottom: 3px;
+      }
+
+    }
+    .li-body {
+      margin-top: 6px;
+    }
+  }
+}

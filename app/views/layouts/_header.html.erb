@@ -1,0 +1,53 @@
+<header class="navbar navbar-fixed-top navbar-inverse">
+  <div class="container">
+
+    
+
+    <nav>
+      <ul class="nav navbar-nav navbar-left not-brand">
+        <li>
+          <%= link_to image_tag("GitHub-Mark-32px.png", size: "25x25"), "https://github.com/chadmg", target: '_blank' %>
+        </li>
+        <li class="dropdown menuitem">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            Resume <b class="caret"></b>
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <%= link_to "View", view_resume_path, target: '_blank' %>
+            </li>
+            <li>
+              <%= link_to "Download", download_resume_path %>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+
+    <nav>
+      <ul class="nav navbar-nav brand">
+        <li>
+          <%= link_to "Chad Grimaldi", root_path, id: "logo" %>
+        </li>
+      </ul>
+    <nav>
+    
+
+    <nav>
+      <ul class="nav navbar-nav navbar-right not-brand">
+        <li class="menuitem"><%= link_to "Projects", projects_path %></li>
+        <li class="dropdown menuitem">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            Tutorials <b class="caret"></b>
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <%= link_to "Docker", docker_path %>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>

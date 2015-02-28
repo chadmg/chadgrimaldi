@@ -1,0 +1,18 @@
+<% provide(:title, "Projects | Chad Grimaldi") %>
+<div class="jumbotron">
+<h1>Recent Projects:</h1>
+<ul class="projects">
+  <li>
+    <div class="li-title">
+      <%= link_to 'StockWatch', 'http://stock-watch.herokuapp.com', target: '_blank' %>
+
+      <%= link_to image_tag("GitHub-Mark-32px.png", size: "24x24"), "https://github.com/chadmg/stock_watch.git", target: '_blank', class: "github-icon" %>
+      
+    </div>
+    <div class="li-body">
+      <p>Ruby on Rails Web App used for tracking specific equities and monitoring their current price using data  provided by Yahoo Finance. The ultimate goal is to allow users to set up triggers for each of their tracked equities such that they can receive a notification/text message when a price goes above or below a specified value.</p>
+    </div>
+  </li>
+  
+</ul>
+</div>

@@ -8,6 +8,9 @@ class StaticPagesController < ApplicationController
   def docker
   end
 
+  def docker_basics
+  end
+
   def download_resume
     send_file Rails.root.join("public", "ChadGrimaldiResume.pdf"), type: "application/pdf", x_sendfile: true
   end

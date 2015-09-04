@@ -1,0 +1,59 @@
+<% provide(:title, "Docker Basics") %>
+<div class="jumbotron">
+<h1>Getting Started with Docker</h1>
+<hr>
+<h3>Install Docker</h3>
+<p>The
+<%= link_to 'Docker Installation Page', 'https://docs.docker.com/installation/#installation' , target: '_blank' %>
+allows you to choose your OS and install their software. Right now would also be a good time to <%= link_to 'Create an Account', 'https://docs.docker.com/userguide/dockerhub/#register-via-the-web', target: "_blank" %> on Docker's site so that you can log in from the command line.
+</p>
+
+<br>
+<h4> Check to make sure Docker is running: </h4>
+<pre>
+  $ docker -v
+  Docker version 1.5.0, build a6e97c2
+</pre>
+<br>
+<h4>Log in:</h4>
+<pre>
+  $ sudo docker login
+</pre>
+<br>
+<br>
+<h3>The Basics</h3>
+<p>
+Everything you do to interact with the Docker software will be right at the command line, each instruction consists of the following:
+</p>
+<pre>
+  $ docker [OPTIONS] COMMAND [arg...]
+</pre>
+
+<br>
+<p>
+  If you were to just type 'docker' and then hit enter, like below, the program will give you more details about everything you are able to do. Don't worry if this looks confusing right now, there are some things listed that I have never used or needed.
+</p>
+<pre>
+  $ docker
+  Usage: docker [OPTIONS] COMMAND [arg...]
+
+  A self-sufficient runtime for linux containers.
+
+  Options:
+    --api-enable-cors=false
+  ...
+</pre>
+
+<br>
+<h4>High-level Concepts</h4>
+<p>Before you even begin to take advantage of everything Docker has to offer you, it is important to make sure you understand the basic structure of how the software is used. There are two main 'objects' in your Docker environment that you will be working with: Images and Containers.</p>
+
+<p><b>IMAGES</b></p>
+<div class="defn">
+<p>Every linux machine blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah</p>
+</div>
+<p><b>CONTAINERS</b></p>
+<div class="defn">
+<p>Every linux machine blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah</p>
+</div>
+</div>

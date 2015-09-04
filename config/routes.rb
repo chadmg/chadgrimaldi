@@ -9,6 +9,7 @@ Rails.application.routes.draw do
 
 
   get 'projects' => 'static_pages#projects'
+  get 'docker_basics' => 'static_pages#docker_basics'
   get 'docker' => 'static_pages#docker'
   get 'download_resume' => 'static_pages#download_resume'
   get 'view_resume' => 'static_pages#view_resume'

@@ -1,4 +1,274 @@
-<% provide(:title, "Chad Grimaldi") %>
-<div class="center jumbotron">
-  <h2>Welcome to my personal site!</h2>
+<% provide(:title, "Resume | Chad Grimaldi") %>
+
+<div class="wrapper">
+
+    
+
+    <div class="wrapper-header">
+      <div class="wrapper-header-center">
+        <div class="header-tile header-about" id="header-about">
+
+        </div>
+        <div class="header-tile header-edu" id="header-education">
+
+        </div>
+        <div class="header-tile header-work" id="header-work">
+
+        </div>
+        <div class="header-tile header-projects" id="header-projects">
+
+        </div>
+        <div class="header-tile header-contact" id="header-contact">
+
+        </div>
+      </div>
+    </div>
+
+
+    <div class="wrapper-quick-bio" id="about">
+      <div class="bio">
+        <div class="bio-name">
+          <span class="upper">C</span><span>HAD</span>
+          <span class="upper">G</span><span>RIMALDI</span>
+        </div>
+
+
+        <div class="bio-title">
+          
+            <span class="upper">S</span><span>OFTWARE</span>
+            <span class="upper">E</span><span>NGINEER</span>
+          
+        </div>
+      </div>
+
+    </div>
+
+    <!--
+    <div class="wrapper-body">
+      <div class="add-margins clearfix">
+        <div class="body-greeting">Hello</div>
+        <div class="body-message">This is my resume and personal website. </div>
+      </div>
+    </div>-->
+
+    <div class="wrapper-body clearfix">
+      <div class="body-icons clearfix">
+        <a class="body-icon body-icon-download" href="download_resume">
+          <div class="logo-download"></div>
+          <div class="logo-label">Download Resume</div>
+        </a>
+        <a class="body-icon body-icon-view" href="view_resume" target="_blank">
+          <div class="logo-view"></div>
+          <div class="logo-label">View Resume</div>
+
+        </a>
+        <a class="body-icon body-icon-github" href="http://github.com/chadmg" target="_blank">
+          <div class="logo-github"></div>
+          <div class="logo-label">github</div>
+        </a>
+        <a class="body-icon body-icon-linkedin" href="http://linkedin.com/in/chadgrimaldi" target="_blank">
+          <div class="logo-linkedin"></div>
+          <div class="logo-label">Linked in</div>
+        </a>
+
+      </div>
+
+    </div>
+
+    <div class="wrapper-split">
+
+    </div>
+
+    <div class="wrapper-body light" id="education">
+      <div class="add-margins clearfix">
+        <div class="body-heading">
+          Education
+        </div>
+        <div class="body-left">
+          <div class="body-h1">University of Michigan, Ann Arbor, MI</div>
+          <div class="body-h2">College of Engineering</div>
+          <div class="body-h3">Bachelor of Science in Engineering - Computer Science</div>
+        </div>
+        <div class="body-right">
+          <div class="body-date">May 2016</div>
+        </div>
+
+
+        
+      </div>
+    </div>
+
+    <div class="wrapper-split small"></div>
+
+    <div class="wrapper-body light" id="work">
+      <div class="add-margins clearfix">
+        <div class="body-heading">
+          Work Experience
+        </div>
+        <div class="clearfix">
+          <div class="body-left">
+            <div class="body-h1">Echelon Consulting</div>
+            <div class="body-h3">Software Engineer Intern</div>
+          </div>
+          <div class="body-right">
+            <div class="body-date-label">May 2015 - Aug 2015</div>
+            <div class="body-date">Chicago, IL</div>
+          </div>
+        </div>
+        <ul>
+          <li>Worked as full-stack developer designing database backed single-page applications adding functionality to a large-scale Java-based content management system.
+          </li>
+          <li>Organized and presented team meetings to clients demonstrating development progress while also receiving feedback and continuously updating the code base. 
+          </li>
+          <li>Developed fully responsive front-end JavaScript widgets allowing for both extensibility and browser compatibility using libraries such as Dojo and jQuery.
+          </li>
+        </ul>
+        
+        <div class="clearfix">
+          <div class="body-left">
+            <div class="body-h1">Self-Contractor</div>
+            <div class="body-h3">Hardware Designer and Programmer</div>
+          </div>
+          <div class="body-right">
+            <div class="body-date-label">May 2014 - Apr 2015</div>
+            <div class="body-date">Ann Arbor, MI</div>
+          </div>
+        </div>
+        <ul>
+          <li>Utilized ARM Cortex-M3 CPU (Nucleo prototype boards) with MBed OS to produce functional prototypes leading to final product design, and fully testable programs.
+          </li>
+          <li>Integrated various components such as Bluetooth module, thermocouple, LCD screen/driver, and user input to result in comfortable UI and accessibility.
+          </li>
+          <li>Practiced design for manufacturing by optimizing limited use of memory for flash storage and RAM.
+          </li>
+          <li>Ported hardware peripheral libraries from Arduino to MBed using provided hardware abstraction layers.</li>
+        </ul>
+        
+
+        <div class="clearfix">
+          <div class="body-left">
+            <div class="body-h1">University of Michigan Astronomy Department</div>
+            <div class="body-h3">Postdoctoral Research Partner</div>
+            
+          </div>
+          <div class="body-right">
+            <div class="body-date-label">Sep 2012 - May 2013</div>
+            <div class="body-date">Ann Arbor, MI</div>
+          </div>
+        </div>
+        <ul>
+            <li>Analyzed open source telescopic images of galaxy M33 by studying radiation measurements of all individual stars.
+            </li>
+            <li>Computed with Matlab applicable information by combining large datasets.
+            </li>
+            <li>Attained and presented accurate photometry including data such as the composition of galaxy, along with electromagnetic radiation levels.
+            </li>
+          </ul>
+      </div>
+    </div>
+
+    <div class="wrapper-split"></div>
+
+    <div class="wrapper-body" id="projects">
+      <div class="add-margins clearfix">
+        <div class="body-heading">
+          Recent Projects
+        </div>
+
+        <div class="clearfix">
+          <div class="body-left">
+            <div class="body-h1">
+              <%= link_to 'StockWatch', 'http://stock-watch.herokuapp.com', target: '_blank' %>
+            </div>
+          </div>
+          <div class="body-right">
+            <%= link_to image_tag("github2-logo.png", size: "24x24"), "https://github.com/chadmg/stock_watch.git", target: '_blank', class: "github-logo" %>
+          </div>
+        </div>
+        <div class="screenshot">
+          <%= image_tag("stockwatch-screenshot-1.png", class: "screenshot-image") %>
+        </div>
+        <div class="body-project-desc">
+          StockWatch is a Ruby on Rails Web App used for tracking specific equities and monitoring their current price using data provided by Yahoo Finance. The ultimate goal is to allow users to set up triggers for each of their tracked equities such that they can receive a notification/text message when a price goes above or below a specified value.
+        </div>
+        <div class="screenshot">
+          <%= image_tag("stockwatch-screenshot-2.png", class: "screenshot-image") %>
+        </div>
+        <div class="body-project-desc">
+          The main goal of this project was to not only familiarize myself with the Ruby on Rails web framework itself, but to also get more comfortable using different front end web technologies along with it. Dynamically creating many AJAX links for every page based on the users current tracked equities provided a very quick and easy way for anyone to customize the site to their liking, while only needing to load a small number of separate pages.
+        </div>
+
+        <hr>
+
+        <div class="clearfix">
+          <div class="body-left">
+            <div class="body-h1">
+              <%= link_to 'Dirty Basement Blues Band', 'http://dirtybasementblues.herokuapp.com', target: '_blank' %>
+            </div>
+          </div>
+          <div class="body-right">
+            <%= link_to image_tag("github2-logo.png", size: "24x24"), "https://github.com/chadmg/dirty_basement_blues", target: '_blank', class: "github-logo" %>
+          </div>
+        </div>
+        <div class="screenshot">
+          <%= image_tag("dirtybasementblues-screenshot-1.png", class: "screenshot-image") %>
+        </div>
+        <div class="body-project-desc">
+          My cousin asked me to build a website for his band. Using Rails along with a PostgreSQL database, I created a custom content management system that allows each member of the band to add, delete, and modify content on the site through a simple and intuitive interface.
+        </div>
+        <div class="screenshot small">
+          <%= image_tag("dirtybasementblues-screenshot-2.png", class: "screenshot-image") %>
+        </div>
+        <div class="body-project-desc">
+          Responsiveness was an important aspect while building the site layout and navigation as a majority of visitors would likely be on a mobile device. In addition, creating the RESTful system to work with all types of content and resources provided the band with everything needed to keep the site up-to-date and fresh without any of them ever having to write a line of code.
+        </div>
+
+        <hr>
+
+        <div class="clearfix">
+          <div class="body-left">
+            <div class="body-h1">
+              <%= link_to 'WordSlide', 'http://wordslide.herokuapp.com', target: '_blank' %>
+            </div>
+          </div>
+          <div class="body-right">
+            <%= link_to image_tag("github2-logo.png", size: "24x24"), "https://github.com/chadmg/word_slide.git", target: '_blank', class: "github-logo" %>
+          </div>
+        </div>
+        <div class="screenshot">
+          <%= image_tag("wordslide-screenshot-1.png", class: "screenshot-image") %>
+        </div>
+        <div class="body-project-desc">
+          This simple tile-based spelling game was planned to be more of an experiment than an actual complete and playable game. After discovering the simplicity of CSS3 animations, I wanted to see if the animations alone mixed with some javascript could create a fully animated game with many DOM elements moving on the screen at once. Try it out <a href="http://wordslide.herokuapp.com" target="_blank">here!</a> 
+          <br>
+          <br>
+          How was it made? First, using random number generation, the <span style="color: #889910">static bordering tiles</span> are placed in such a way to result in a blob-shaped map of empty spots in the middle. Now, once per turn, the <span style="color: #762109">dynamic letter tiles</span> are placed randomly in the available positions. Each turn the user can trigger up, down, left, or right transitions similar to the game <a href="http://gabrielecirulli.github.io/2048/">2048</a>. In order to make the game more playable, I used letter frequency analysis and on the English language to weight the random letters placed. As expected, this made it much easier to actually come across real words while playing.
+          <br>
+          <br>
+          With the help of SASS to dynamically generate a ton of CSS, and Javascript to change class names based on current map layout and key pressed, the sliding effect of the tiles was very successful. All that's left is to implement the actual word finding functionality along with score keeping, from there the game will have a pretty good foundation started.
+        </div>
+      </div>
+
+    </div>
+
+    <div class="wrapper-split small"></div>
+
+    <div class="wrapper-body light" id="contact">
+      <div class="add-margins clearfix">
+        <div class="body-heading">
+          Contact me!
+        </div>
+        <div class="body-h1">
+          As a senior in college graduating this May, I am currently seeking a full-time position as a developer. Please feel free to send an email to find out more about me or the work I have done in the past!
+        </div>
+        <div class="body-email">
+          <a href="mailto:chadmg@umich.edu" target="_top">chadmg@umich.edu</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrapper-split"></div>
+    <div class="wrapper-split"></div>
+    <div class="wrapper-split"></div>
+    <div class="wrapper-split"></div>
 </div>

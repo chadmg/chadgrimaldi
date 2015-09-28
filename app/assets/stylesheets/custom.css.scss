@@ -1,9 +1,17 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+$header-height: 50px;
+
+
 body {
   /* make room for header */
-  padding-top: 50px;
+  padding-top: 0;
+
+  font-family: 'Kadwa', serif;/*
+  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;*/
+
+
 }
 
 section {
@@ -14,13 +22,9 @@ textarea {
   resize: vertical;
 }
 
-.defn {
-  margin-top: -12px;
-  margin-left: 24px;
-}
 
 a {
-  color: #437C97;
+  color: #464646;
   font-size: 1.1em;
   &:hover {
     color: #699CB5;
@@ -31,23 +35,6 @@ a {
 .center {
   text-align: center;
 
-  /* what makes SASS cool, 'nesting'
-  same as using:;
-  .center h1 { }
-  */
-
-  /* this happens in 'jumbotron' pages like
-    Home page, About, Contact */
-  h1 {
-    
-    margin-bottom: 20px;
-    margin-top: 10px;
-  }
-
-}
-
-.jumbotron {
-  padding-top: 15px;
 }
 
 
@@ -75,39 +62,7 @@ p {
   line-height: 1.2em !important;
 }
 
-
-$logo-color: #9FC5D7;
-$logo-color-hover: #699CB5;
-$navbar-color: #437C97;
-
-.navbar .nav > li.dropdown.open.active > a:hover, 
-.navbar .nav > li.dropdown.open > a
-{
-   background-color: $logo-color-hover;
-}
-
-.menuitem {
-
-  margin-top: 4px;
-}
-
-
-ul.nav a {
-  color: #cdc9c9 !important;
-
-  &:hover {
-    color: white !important;
-  }
-}
-
-ul.dropdown-menu {
-  background-color: $logo-color-hover !important;
-
-  a {
-    color: #cdc9c9 !important;
-    background-color: $logo-color-hover !important;
-  }
-}
+/*
 
 #logo {
   font-size: 2.1em;
@@ -124,83 +79,450 @@ ul.dropdown-menu {
   }
 }
 
+*/
 
-.navbar-inverse {
-  background-color: $navbar-color;
+body {
+  background: #000000;
 
 }
 
-.not-brand {
-  position: relative;
-}
+.wrapper {
 
-
-
-.brand {
-  position: absolute;
-    left: 50%;
-    margin-left: -110px !important;
-    display: block;
-}
-
-
-
-footer {
-  margin-top: 45px;
-  padding-top: 5px;
-  border-top: 1px solid #eaeaea;
-  color: #777;
-  font-size: 1.0em !important;
-}
-
-footer a {
-  font-size: 1.0em !important;
-  color: #555;
-}
-
-footer a:hover {
-  color: #222;
-}
-
-footer small {
-  float: left;
-}
-
-footer ul {
-  float: right;
-  list-style: none;
-}
-
-footer ul li {
-  float: left;
-  margin-left: 15px;
-}
-
-
-/* projects list style */
-.projects {
-  list-style: none;
-  margin: 0;
   
-  li {
-    margin-top: 15px;
-    margin-bottom: 40px;
-    overflow: auto;
-    padding: 0;
-    .li-title {
-      font-size: 1.5em !important;
-      border-bottom: 1px solid #777;
-      position: relative;
 
-      .github-icon {
-        margin-left: 10px; 
-        position: absolute; 
-        bottom: 3px;
-      }
+  height: 100%;
+  background-image: image-url("aa-sunset.jpg");
+  background-repeat: no-repeat;
+  
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  
+
+
+
+}
+
+
+.wrapper-header {
+  z-index: 2;
+  background-color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  
+  width: 100%;
+
+  height: $header-height;
+}
+
+
+
+$header-border-color: #464646;
+
+.wrapper-header-center {
+  
+  margin: 0 auto;
+
+  width: 500px;
+  height: $header-height;
+
+  .header-tile {
+
+    
+    width: 20%;
+    height: $header-height;
+    border-right: 1px solid $header-border-color;
+    
+
+    float: left;
+
+    &.active {
+      background-color: $header-border-color;
+    }
+
+    &:first-child {
+      border-left: 1px solid $header-border-color;
+    }
+
+    &:hover {
+      background-color: $header-border-color;
 
     }
-    .li-body {
-      margin-top: 6px;
+
+
+  }
+
+  .header-about {
+    background-image: image-url("about-logo.png");
+    background-size: 25%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .header-edu {
+    background-image: image-url("edu-logo.png");
+    background-size: 25%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .header-work {
+    background-image: image-url("work-logo.png");
+    background-size: 25%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .header-projects{
+    background-image: image-url("projects-logo.png");
+    background-size: 25%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .header-contact {
+    background-image: image-url("contact-logo.png");
+    background-size: 25%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+}
+
+.wrapper-quick-bio {
+  /* for using scrolling in js */
+  position: relative;
+
+
+  /*transform: skewY(2deg);*/
+  margin-top: $header-height;
+  
+
+  padding-top: 190px;
+  padding-bottom: 15px;
+
+  text-align: right;
+  color: #FFF;
+  width: 100%;
+
+
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+45&amp;0+23,0.65+100 */
+  background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0) 23%, rgba(0,0,0,0.19) 45%, rgba(0,0,0,0.65) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(23%,rgba(0,0,0,0)), color-stop(45%,rgba(0,0,0,0.19)), color-stop(100%,rgba(0,0,0,0.65))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 23%,rgba(0,0,0,0.19) 45%,rgba(0,0,0,0.65) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 23%,rgba(0,0,0,0.19) 45%,rgba(0,0,0,0.65) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 23%,rgba(0,0,0,0.19) 45%,rgba(0,0,0,0.65) 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 23%,rgba(0,0,0,0.19) 45%,rgba(0,0,0,0.65) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 ); /* IE6-9 */
+
+
+  .bio {
+    /*transform: skewY(-2deg);*/
+    margin: 0 20px;
+  }
+
+  .bio-title {
+    
+    font-size: 22px;
+    line-height: 0.8;
+    /*border-top: solid 3px white;*/
+    span.upper {
+      font-size: 24px;
+      letter-spacing: -1px;
+    }
+  }
+
+  .bio-name { 
+    font-size: 34px;
+      
+    span.upper {
+      font-size: 36px;
+      letter-spacing: -1px;
+      
+    }
+
+  }
+
+}
+
+.add-margins {
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+
+  margin-bottom: 20px;
+
+  /*transform: skewY(-2deg);*/
+}
+
+.wrapper-body {
+  margin-top: -2px;
+  /*transform: skewY(2deg);*/
+
+  /* for using scrolling in js */
+  position: relative;
+  
+  padding: 20px;
+  
+  color: white;
+  background-color: #696969;
+
+  .body-heading {
+    font-size: 32px;
+    color: #CDCDCD;
+    font-variant: small-caps;
+    margin-bottom: 0px;
+
+
+  }
+
+  .body-email {
+    font-size: 24px;
+    text-decoration: underline;
+  }
+
+  .body-h1 {
+    color: #FFF;
+    font-size: 18px;
+    margin-bottom: 5px;
+
+    a {
+      color: #FFF;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  &.light {
+    color: black;
+    background-color: #fff;
+
+    .body-heading {
+      color: #aeaeae;
+    }
+
+    .body-h1 {
+      color: #446CB3;
+    }
+  }
+
+  .body-greeting {
+    font-size: 24px;
+    color: #cdcdcd;
+
+  }
+
+  .body-message {
+    /* margin-bottom: 150px; */
+  }
+
+  .body-project-desc {
+    color: #CDCDCD;
+    margin: 15px 0 30px 0;
+  }
+
+  
+
+  .body-left {
+    float: left;
+    margin-top: 25px;
+  }
+
+  .body-right {
+    margin-top: 25px;
+    float: right;
+
+    .github-logo {
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  
+
+  .body-h2 {
+
+
+  }
+
+  .body-h3  {
+    font-style: italic;
+  }
+
+  ul {
+    margin-top: 10px;
+    li {
+      margin-bottom: 5px;
+    }
+  }
+
+  .body-date {
+    float: right;
+    font-size: 14px;
+  }
+
+  .body-date-label {
+    
+    font-size: 12px;
+  }
+
+
+
+  .body-icons {
+
+
+
+    /*transform: skewY(-2deg);*/
+
+    margin-bottom: 20px;
+
+    .body-icon {
+      width: 20%;
+      margin-left: 2.5%;
+      margin-right: 2.5%;
+
+      float: left;
+
+      color: white;
+
+      .logo-label {
+        text-align: center;
+      }
+    }
+
+    .body-icon:hover {
+      opacity: 0.7;
+    }
+
+    .body-icon-download {
+      .logo-download {
+        width: 100%;
+        height: 130px;
+        background-image: image-url("download-resume-logo.png");
+        background-size: 30%;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    }
+    .body-icon-view {
+      .logo-view {
+        width: 100%;
+        height: 130px;
+        background-image: image-url("view-resume-logo.png");
+        background-size: 30%;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    }
+    .body-icon-github {
+      .logo-github {
+        width: 100%;
+        height: 130px;
+        background-image: image-url("github-logo.png");
+        background-size: 30%;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    }
+    .body-icon-linkedin {
+      .logo-linkedin {
+        width: 100%;
+        height: 130px;
+        background-image: image-url("linkedin-logo.png");
+        background-size: 30%;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    }
+
+
+  }
+  
+}
+
+.screenshot {
+
+  .screenshot-image {
+    width: 100%;
+  }
+
+  &.small {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.wrapper-split {
+  /*transform: skewY(2deg);*/
+
+  height: 180px;
+  width: 100%;
+  background: rgba(0,0,0,0.4);
+
+  &.small {
+    height: 30px;
+  }
+}
+
+
+@media (max-width: 770px) {
+
+  .wrapper-body {
+    padding: 15px;
+  }
+
+  .wrapper-body .body-icons {
+
+    margin-top: -30px;
+
+    .body-icon {
+      width: 40%;
+      margin-left: 5%;
+      margin-right: 5%;
+      margin-top: 30px;
+    }
+  }
+
+  .wrapper-header-center {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+}
+
+@media (max-width: 500px) {
+
+  .wrapper-body {
+    padding: 10px;
+  }
+
+  .wrapper-header-center {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+
+    .header-tile {
+      background-size: 32%;
+    }
+  }
+
+  .logo-label {
+    font-size: 0.7em;
+  }
+
+  .screenshot {
+    margin-left: -20px;
+    margin-right: -20px;
+
+    &.small {
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 }

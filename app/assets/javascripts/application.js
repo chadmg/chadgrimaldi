@@ -73,7 +73,7 @@ $(".header-tile").click(function(e) {
   scrollingToItem = true;
   $('html, body').animate({
     scrollTop: elem.offset().top - 50
-  }, 1000, function() {
+  }, 600, function() {
     scrollingToItem = false;
   });
   $(".header-tile").removeClass("active");
